@@ -1,0 +1,189 @@
+@import "compass";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+// font-family
+$baseFontFamily :"游ゴシック", YuGothic, "メイリオ",Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+// colors
+$baseColor: #fdfcf6;
+$subColor: #bea300;
+$keyColor: #14c0c9;
+$fontColor: #4c4c4c;
+
+
+/* Base
+------------------------------------------------------------*/
+html{ font-size: 62.5%; }
+
+body{
+  color: $fontColor;
+  font-size: 1.4rem;
+  font-family:$baseFontFamily;
+  line-height:1.6;
+  letter-spacing: 0.1em; 
+  background-color: $baseColor;
+}
+
+a {
+  @include link-colors($keyColor, darken($keyColor, 10%), lighten($keyColor, 5%), darken($keyColor, 10%));
+  text-decoration: none;
+}
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center;
+}
+
+/* Layout
+------------------------------------------------------------*/
+.block-center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Font
+------------------------------------------------------------*/
+.abel {
+  font-family: 'Abel', sans-serif;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+
+/* Header
+------------------------------------------------------------*/
+
+header {
+  .profile {
+        img {
+          width: 100%;
+          height: 250px;
+          object-fit: cover;
+        }
+    }
+  .profile-inner {
+    width: 60%;
+    margin: 0 auto;
+    padding: 60px 0 0;
+    clear: both;
+  }
+  .site-title {
+    font-size: 1.8rem;
+    line-height: normal;
+    span {
+      display: block;
+      font-size: 4.2rem;
+      color: $keyColor;
+    }
+  }
+  .profile-icon {
+    @include border-radius(50%);
+    margin: 30px auto;
+  }
+  p {
+    font-size: 1.6rem;
+  }
+}
+
+/* Contents
+------------------------------------------------------------*/
+// Common Styles
+section {
+  .container {
+    width: 90%;
+    @extend .block-center;
+  }
+
+}
+/* Contents
+------------------------------------------------------------*/
+// Skills
+#skills {
+  .container {
+    padding: 30px 0 0;
+    @include display-flex;
+    justify-content: space-between;
+    @include flex-direction(column);
+  }
+  .skill-box {
+    margin: 10px 0px;
+
+  }
+
+  .skill-box-title {
+    @extend .abel;
+    @extend .uppercase;
+    color: $baseColor;
+    font-size: 2.4rem;
+    font-weight: bold;
+    background-color: $keyColor;
+  }
+  
+  .skill-box-text {
+    padding: 20px;
+    border: 1px solid $keyColor;  
+  }
+
+}
+
+// Contact
+#contact {
+    padding: 30px 0;
+    h1 {
+
+    font-size: 1.6rem;
+
+    }
+    .button-contact {
+          margin: auto;
+          text-align: center;
+          padding: 5px 0;
+          width: 200px;
+          display: block;
+          color: #FFF;
+          font-weight: bold;
+          background-color: $keyColor;
+          @extend .abel;
+          @extend .uppercase;
+          @include border-radius(4px);
+          font-size: 1.8rem;
+    }
+}
+
+/* Footer
+------------------------------------------------------------*/
+footer {
+  background-color: $subColor;
+  padding: 10px 0;
+  text-align: center;
+  color: #FFF;
+}
+
+// desktop
+@media (min-width: 769px) {
+
+ header {
+  .profile {
+        img {
+          width: 100%;
+          height: 500px;
+          object-fit: cover;
+        }
+    }
+  }
+  // Skills
+  #skills {
+    .container {
+      @include flex-direction(row);
+      justify-content: space-between;
+    }
+    .skill-box {
+      margin: 0 10px;
+      width: (100% / 3);
+    }
+    .skill-box-text {
+      height: 140px;
+    }
+  }
+}

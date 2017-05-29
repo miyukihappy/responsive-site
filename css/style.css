@@ -1,0 +1,139 @@
+@charset "UTF-8";
+@import url(https://fonts.googleapis.com/css?family=Abel);
+/* Base
+------------------------------------------------------------*/
+html {
+  font-size: 62.5%; }
+
+body {
+  color: #4c4c4c;
+  font-size: 1.4rem;
+  font-family: "游ゴシック", YuGothic, "メイリオ", Verdana, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
+  background-color: #fdfcf6; }
+
+a {
+  color: #14c0c9;
+  text-decoration: none; }
+  a:visited {
+    color: #0f949b; }
+  a:hover {
+    color: #0f949b; }
+  a:active {
+    color: #16d6e0; }
+
+/* Align
+------------------------------------------------------------*/
+.text-center {
+  text-align: center; }
+
+/* Layout
+------------------------------------------------------------*/
+.block-center, section .container {
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+/* Font
+------------------------------------------------------------*/
+.abel, #skills .skill-box-title, #contact .button-contact {
+  font-family: 'Abel', sans-serif; }
+
+.uppercase, #skills .skill-box-title, #contact .button-contact {
+  text-transform: uppercase; }
+
+/* Header
+------------------------------------------------------------*/
+header .profile img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover; }
+header .profile-inner {
+  width: 60%;
+  margin: 0 auto;
+  padding: 60px 0 0;
+  clear: both; }
+header .site-title {
+  font-size: 1.8rem;
+  line-height: normal; }
+  header .site-title span {
+    display: block;
+    font-size: 4.2rem;
+    color: #14c0c9; }
+header .profile-icon {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  margin: 30px auto; }
+header p {
+  font-size: 1.6rem; }
+
+/* Contents
+------------------------------------------------------------*/
+section .container {
+  width: 90%; }
+
+/* Contents
+------------------------------------------------------------*/
+#skills .container {
+  padding: 30px 0 0;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+  -webkit-flex-direction: column;
+  flex-direction: column; }
+#skills .skill-box {
+  margin: 10px 0px; }
+#skills .skill-box-title {
+  color: #fdfcf6;
+  font-size: 2.4rem;
+  font-weight: bold;
+  background-color: #14c0c9; }
+#skills .skill-box-text {
+  padding: 20px;
+  border: 1px solid #14c0c9; }
+
+#contact {
+  padding: 30px 0; }
+  #contact h1 {
+    font-size: 1.6rem; }
+  #contact .button-contact {
+    margin: auto;
+    text-align: center;
+    padding: 5px 0;
+    width: 200px;
+    display: block;
+    color: #FFF;
+    font-weight: bold;
+    background-color: #14c0c9;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+    font-size: 1.8rem; }
+
+/* Footer
+------------------------------------------------------------*/
+footer {
+  background-color: #bea300;
+  padding: 10px 0;
+  text-align: center;
+  color: #FFF; }
+
+@media (min-width: 769px) {
+  header .profile img {
+    width: 100%;
+    height: 500px;
+    object-fit: cover; }
+
+  #skills .container {
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    justify-content: space-between; }
+  #skills .skill-box {
+    margin: 0 10px;
+    width: 33.33333%; }
+  #skills .skill-box-text {
+    height: 140px; } }
+
+/*# sourceMappingURL=style.css.map */
