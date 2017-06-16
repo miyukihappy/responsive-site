@@ -37,10 +37,10 @@ a {
 
 /* Font
 ------------------------------------------------------------*/
-.abel, #skills .skill-box-title, #contact .button-contact {
+.abel, #skills h3, #contact .button-contact {
   font-family: 'Abel', sans-serif; }
 
-.uppercase, #skills .skill-box-title, #contact .button-contact {
+.uppercase, #skills h3, #contact .button-contact {
   text-transform: uppercase; }
 
 /* Header
@@ -84,15 +84,21 @@ section .container {
   -webkit-flex-direction: column;
   flex-direction: column; }
 #skills .skill-box {
-  margin: 10px 0px; }
-#skills .skill-box-title {
+  -webkit-flex: 1;
+  flex: 1;
+  margin: 10px 0;
+  padding: 0;
+  border: solid 1.5px #14c0c9;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+#skills h3 {
+  background-color: #14c0c9;
   color: #fdfcf6;
   font-size: 2.4rem;
-  font-weight: bold;
-  background-color: #14c0c9; }
-#skills .skill-box-text {
-  padding: 20px;
-  border: 1px solid #14c0c9; }
+  font-weight: bold; }
+#skills p {
+  padding: 10px; }
 
 #contact {
   padding: 30px 0; }
@@ -100,7 +106,6 @@ section .container {
     font-size: 1.6rem; }
   #contact .button-contact {
     margin: auto;
-    text-align: center;
     padding: 5px 0;
     width: 200px;
     display: block;
@@ -132,8 +137,6 @@ footer {
     justify-content: space-between; }
   #skills .skill-box {
     margin: 0 10px;
-    width: 33.33333%; }
-  #skills .skill-box-text {
-    height: 140px; } }
+    width: 33.33333%; } }
 
 /*# sourceMappingURL=style.css.map */
